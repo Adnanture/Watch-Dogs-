@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>We are watching you</title>
+  <link rel="stylesheet" href="54.css">
+</head>
+<body>
+
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Hacker</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+  <div id="top">
+
+   </div>
+<source src="4.mp3"   autoplay="true"/></source>
+  <div id="contacts">
+    <center><h5>Регистрация</h5></center>
+    <form id="form_input">
+      <label for="name">Твой Nickname  </label><br>
+      <input type="text" placeholder="Ghost of Internet" name="name" id="name"><br>
+      <label for="email"> Твой Email  </label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Твое послание  </label><br>
+			<textarea placeholder="Сложности создают возможность" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <center><span class="title">Информация</span></center><br>
+      <span class="heading">Idea of this page</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.
+      </p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>

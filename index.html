@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  html {
+    width: 100%;
+    height: 100%;
+  background: url(3.gif)
+        no-repeat  center center fixed;
+         background-size: cover;
+
+
+ }
+            </style>
+
+  <title>Полезная страница</title>
+  <link rel="stylesheet">
+
+</head>
+  <body>
+    <audio controls="controls" >
+ <source src="4.mp3" type="audio/mpeg" autoplay="true"/>
+</audio>
+<header>
+  <div id="logo">
+    <span>Hacker</span>
+  </div>
+  <div id="about">
+    <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности<a/>
+    <a href="#" onclick="slowScroll('#overiew')" title="Преимущества">Преимущества</a>
+    <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+    <a href="#" onclick="slowScroll('#faq')"  title="Ответы на вопросы">FAQ</a>
+  </a>
+</header>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  function slowScroll(id) {
+    $('body').animate({
+      scrollTop: $(id).offset().top
+    },500);
+  }
+  $(document).on("scroll", function () {
+    if($(window).scrollTop() === 0 )
+    $("header").removeClass("fixed");
+    else
+    $("header").attr("class", "fixed");
+
+  });
+</script>
+</body>
+</html>
